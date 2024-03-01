@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zer0Core Lab - Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Image styling */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto; 
+        }
+
+        .image-grid-item {
+            flex-basis: calc(100% - 30px); 
+            margin: 15px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .image-grid-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-grid-item {
+                flex-basis: calc(100% - 30px); 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navbar-list">
+            <li><a href="../index.html"><span class="logo">Zer0Core Lab</span></a></li>
+            <li class="hideOnSmall"><a href="blog.html">blog</a></li>
+            <li class="hideOnSmall"><a href="https://github.com/Zer0core-Lab?tab=projects">project</a></li>
+            <li class="hideOnSmall"><a href="about.html">about</a></li>
+            <li class="menu-button hideOnLarge" onclick="toggleSidebar()"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li onclick="hideSidebar()"><a href="#"><i class="fas fa-times"></i></a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="https://github.com/Zer0core-Lab?tab=projects">project</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+    <div class="blog-section">
+        <h2> Blog Posts</h2>
+      
+        <div class="container">
+            <div class="image-grid-item">
+              <img src="../images/prog.png" alt="programming" style="max-width: 80%;">
+              <p><a href="../root/oblog.html">Programming Languages for Hardware Hacking and Vulnerability Research</a></p>
+          </div>
+              <div class="image-grid-item">
+                  <img src="../images/rasp.jpg" alt="emulate" style="max-width: 80%;">
+                  <p><a href="../root/emulating.html">How to emulate raspberry pi for arm assembly programming</a></p>
+              </div>
+                </div>
+
+                <h2> Loading</h2>
+                
+                <div class="card">
+                    <h3><a href="arm.html" style="color: white;">Introduction to Arm Assembly</a></h3>
+                </div>
+            
+                <div class="card">
+                    <h3><a href="post2.html" style="color: white;">Basic Binary</a></h3>
+                </div>
+                <div class="card">
+                    <h3><a href="post5.html" style="color: white;">Dynamic Binary Analysis Techniques</a></h3>
+                </div>
+            </div>
+        </div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-sitemap">
+            <ul>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="project.html">project</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-icons">
+            <ul>
+                <li><a href="https://www.x.com" target="_blank"><i class="fab fa-xing"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a></li>    
+                <li><a href="mailto:scopemask@gmail.com"><i class="far fa-envelope"></i></a></li>
+                <li><a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a></li>         
+            </ul>
+        </div>
+    </div>
+
+        <div class="footer-text">
+            <li>&copy; 2024 Zer0Core Lab</li>
+        </div>
+</footer>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.remove('active');
+    }
+</script>
+
+</body>
+</html>

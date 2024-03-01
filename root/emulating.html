@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zer0Core Lab - Emulating Arm</title>
+    <link rel="stylesheet" href="../css/genblog.css">
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      /* CSS for styling the code snippet */
+      pre {
+          background-color:rgb(46, 5, 28); 
+          color: #ffffff; 
+          padding: 10px; 
+          border-radius: 5px; 
+          overflow-x: auto;
+          width: 100;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          max-width: 1200px;
+         margin: 0 auto; 
+          
+      }
+      .background {
+        background-color: rgb(22, 21, 21);
+      }
+       /* Image styling */
+       .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.image-grid-item {
+    flex-basis: calc(50% - 30px); 
+    margin: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image-grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .image-grid-item {
+        flex-basis: calc(100% - 30px); 
+    }
+}
+
+.image-grid {
+            flex-basis: calc(100% - 30px); 
+            margin: 15px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .image-grid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-grid {
+                flex-basis: calc(100% - 30px); 
+            }
+        }
+
+  </style>
+</head>
+
+<div class="navbar">
+  <ul class="navbar-list">
+      <li><a href="../index.html"><span class="logo">Zer0Core Lab</span></a></li>
+      <li class="hideOnSmall"><a href="blog.html">blog</a></li>
+      <li class="hideOnSmall"><a href="https://github.com/Zer0core-Lab?tab=projects">project</a></li>
+      <li class="hideOnSmall"><a href="about.html">about</a></li>
+      <li class="menu-button hideOnLarge" onclick="toggleSidebar()"><a href="#"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</div>
+
+<div class="sidebar">
+  <ul class="sidebar-list">
+      <li onclick="hideSidebar()"><a href="#"><i class="fas fa-times"></i></a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="https://github.com/Zer0core-Lab?tab=projects">project</a></li>
+      <li><a href="about.html">about</a></li>
+  </ul>
+</div>
+<div class="container">
+  <div class="content-container">
+    <div class="blog">
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Emulating Raspberry Pi with QEMU: A Guide to ARM Assembly Programming </h2>
+        <h5>Emulating / Development</h5>
+
+        <p> <h4>Introduction: </h4>
+            Raspberry Pi, with its ARM architecture, has become a popular platform for hobbyists and developers alike.
+           <br>  However, sometimes it's not feasible to have physical hardware for development and testing purposes.
+           <br> In such cases, emulation can be a valuable tool.
+           <br>QEMU (Quick EMUlator) is a versatile and powerful emulator that allows you to emulate various architectures,
+             including ARM. In this guide, we'll explore how to set up QEMU to emulate a Raspberry Pi for ARM assembly programming.</p>
+
+          <p> <h4>Step 1: Install QEMU</h4>
+            The first step is to install QEMU on your development machine. QEMU is available for various operating systems including Linux, macOS, and Windows.<br>
+             You can typically install it using your package manager or by downloading it from the official <a href="https://www.qemu.org/">QEMU</a>  website.
+           <!-- Code snippet wrapped in <pre> tags -->
+          <pre>
+            <code>
+              sudo apt-get install qemu-system
+            </code>
+          </pre>
+             </p>
+     
+
+          <p> <h4>Step 2: Download Raspberry Pi firmware and kernel</h4>
+            Next, you'll need a Raspberry Pi firmware and kernel.What you need to do is download two files onto the computer, and I will provide links to them.<br>
+            The first file, which is a "2017-04-10-raspbian-jessie.zip" file, is from  <a href="https://downloads.raspberrypi.org/raspbian/images/raspbian-2017-04-10/">downloads.raspberrypi.org</a> and has a size of 1.5GB. 
+            This operating system image is what we'll be using to work with system emulation, as it offers more stability with QEMU.
+            Furthermore, we'll need a kernel that is compatible with this operating system. You can obtain the appropriate kernel from the corresponding <a href="https://github.com/dhruvvyas90/qemu-rpi-kernel/blob/master/kernel-qemu-4.4.34-jessie">GitHub link</a>.
+             Download the 'kernel-qemu-4.4.34-jessie' file from the provided GitHub repository, ensuring it matches the version of the operating system image.
+           <div class="container">
+            <div class="image-grid-item">
+            <img src="../images/downloadpage.png" alt="downloadpage" style="width:100%">
+            </div>
+            <div class="image-grid-item">
+            <img src="../images/Gitpage.png" alt="Gitpage" style="width:100%">
+            </div>
+          </div>
+          <p>  Unzip the '2017-04-10-raspbian-jessie.zip' file to extract the '2017-04-10-raspbian-jessie.img' file, which QEMU can utilize.</p>
+          
+        <p> <h4>Step 3: Setting up and Running Emulater </h4>
+        
+<br>
+          Once everything is set up, we can proceed to run our emulator by typing the following command in the terminal.
+          
+                  <!-- Code snippet wrapped in <pre> tags -->
+                    <p>
+                    <pre>
+                      <code>
+                        qemu-system-arm -kernel ~/location/kernel-qemu-4.4.34-jessie -cpu arm1176 -m 25 -M versatilepb -serial stdio -append 
+                        "root=/dev/sda2 rootfstype=ext4 rw" -hda ~/location/2017-04-10-raspbian-jessie.img -nic user,hostfwd=tcp::5022-:22 -no-reboot
+                      </code>
+                    </pre>
+                  </p>
+<p>-cpu: This option specifies the CPU architecture that QEMU will use to emulate the Raspberry Pi.</p>
+          
+<p>-append: This option is used to provide additional parameters to the emulated system's kernel at boot time. 
+  In this case, "root=/dev/sda2 rootfstype=ext4 rw" specifies the root filesystem to mount as read-write (rw) from the second partition (/dev/sda2) of the emulated storage device.</p>
+
+ <p>-m: This option sets the amount of RAM allocated to the emulated system. </p>
+<p>-M: This option specifies the type of emulated machine. Using versatilepb indicates that we are emulating a versatile platform baseboard.</p>
+<p>-nic user,hostfwd=tcp::5022-:22: This option sets up port forwarding from the host machine to the emulated Raspberry Pi. 
+  Specifically, it forwards port 5022 on the host to port 22 (SSH) on the emulated system.</p>
+<p> -no-reboot: This option instructs QEMU not to reboot the emulated system. </p>
+             </p>
+             <div class="container">
+              <div class="image-grid">
+              <img src="../images/armemu.png" alt="armemu" style="width:100%">
+              </div>
+              </div>
+<p>Once we run this ,we should see that our qemu start to boot. It will boot into Raspberry Pi OS.</p>
+
+              <div class="container">
+                <div class="image-grid-item">
+                <img src="../images/armrun.png" alt="armrun" style="width:100%">
+                </div>
+                <div class="image-grid-item">
+                <img src="../images/armdone.png" alt="armdone" style="width:100%">
+                </div>
+              </div>
+              <p> <h4>Step 4: Connecting to SSH port and Testing  </h4>
+                With everything set up, our next step involves configuring SSH forwarding on the Raspberry Pi through its terminal interface using this command.
+                    <pre class="background">
+                      <code>
+                        sudo service ssh start
+                      </code>
+                    </pre>
+                    <p>
+                    Once that runs successfully, we will try SSH into the Pi from our computer.
+                  </p>
+                      <pre>
+                        <code>
+                         ssh @pi 127.0.0.1 -p 5022
+                        </code>
+                      </pre>
+                  <p>"pi" is a common username used for Raspberry Pi devices.</p>
+                  <p>127.0.0.1: This is the IP address of the remote device. </p>
+                  <p>-p 5022: This option specifies the port number to use for the SSH connection.</p>
+                  <p>The default password for the device is "raspberry" </p>
+                   
+              <div class="container">
+                <div class="image-grid-item">
+                <img src="../images/armssh.png" alt="armrun" style="width:100%">
+                </div>
+                <div class="image-grid-item">
+                <img src="../images/armok.png" alt="armdone" style="width:100%">
+                </div>
+              </div>
+              <p>We are now inside of our pi using ssh. 
+                With this we have an arm device running on our computer and that is all for now.</p>
+              
+            
+      </div>
+      
+    </div>
+    <div class="rightcolumn">
+      <h3>Other Posts</h3>
+      <div class="card">
+        <div class="card"><a href="oblog.html" style="color: white;">Programming Languages for Hardware Hacking and Vulnerability Research</a></div><br>
+        <h3>Loading Posts</h3>
+        <div class="card">Introduction to Arm Assembly</div><br>
+        <div class="card">Dynamic Binary Analysis Techniques</div><br>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-sitemap">
+            <ul>
+              
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="project.html">project</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+        </div>
+        <div class="footer-icons">
+            <ul>
+                <li><a href="https://www.x.com" target="_blank"><i class="fab fa-xing"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a></li>    
+                <li><a href="mailto:scopemask@gmail.com"><i class="far fa-envelope"></i></a></li>
+                <li><a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a></li>         
+            </ul>
+        </div>
+    </div>
+        <div class="footer-text">
+            <li>&copy; 2024 Zerocore Lab</li>
+        </div>
+</footer>
+<script>
+  function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('active');
+  }
+
+  function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.remove('active');
+  }
+</script>
+  </body>
+  </html>

@@ -1,0 +1,371 @@
+/* Add styles for the logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+/* For navigation */
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-list li {
+  padding: 10px;
+}
+
+.navbar-list li a {
+  font-weight: bold;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-list li a:hover {
+  background-color: #111;
+  border-radius: 5px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #111;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar li {
+  width: 100%;
+  list-style-type: none; 
+}
+
+.sidebar a {
+  width: 100%;
+  display: block;
+  color: white; 
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #333; /* Hover background color */
+  border-radius: 5px;
+}
+
+.sidebar svg {
+  fill: gray; 
+  margin-right: 10px; 
+}
+
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnSmall {
+      display: none;
+  }
+
+  .hideOnLarge {
+      display: block;
+  }
+
+  .sidebar {
+      width: 100%;
+      right: -100%;
+      transition: right 0.3s ease-in-out;
+  }
+
+  .menu-button {
+      display: block;
+  }
+}/* Global styles */
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+/* Add styles for the logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+/* For navigation */
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-list li {
+  padding: 10px;
+}
+
+.navbar-list li a {
+  font-weight: bold;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-list li a:hover {
+  background-color: #111;
+  border-radius: 5px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #111;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar li {
+  width: 100%;
+  list-style-type: none; 
+}
+
+.sidebar a {
+  width: 100%;
+  display: block;
+  color: white; 
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #333; /* Hover background color */
+  border-radius: 5px;
+}
+
+.sidebar svg {
+  fill: gray; 
+  margin-right: 10px; 
+}
+
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnSmall {
+      display: none;
+  }
+
+  .hideOnLarge {
+      display: block;
+  }
+
+  .sidebar {
+      width: 100%;
+      right: -100%;
+      transition: right 0.3s ease-in-out;
+  }
+
+  .menu-button {
+      display: block;
+  }
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: black;
+  }
+  
+  /* Container to center content */
+.container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+  box-sizing: border-box;
+}
+
+/* Add styles for the container */
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.blog {
+  background-color: black;
+  padding: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+a {
+  color: #007bff; 
+  text-decoration: none;
+}
+/* Headings */
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Subheadings */
+h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  background-color: rgb(22, 22, 22);
+  padding: 20px;
+  margin-top: 20px;
+  color: azure;
+}
+  /* Left column */
+  .leftcolumn {
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+
+  }
+  
+  
+  .card {
+    background-color: black;
+    padding: 20px;
+    margin-top: 20px;
+    color: azure;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+/* For Footer */
+.footer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+}
+/* Just footer site map */
+.footer-sitemap ul li {
+  display: inline;
+  float: left;
+}
+.footer-sitemap li a {
+  font-weight: bold;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.footer-sitemap li a:hover {
+  background-color: #111;
+  border-radius: 5px;
+}
+/* For footer icons */
+.footer-icons ul li {
+  display: inline;
+  float: left;
+}
+.footer-icons li a {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.footer-icons li a:hover {
+  background-color:#111;
+  border-radius: 3px;
+}
+
+/* for footer-text */
+.footer-text  li {
+  display: inline;
+  float: left;
+}
+.footer-text  {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}

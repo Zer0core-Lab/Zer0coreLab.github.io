@@ -1,0 +1,470 @@
+/* Global styles */
+body, html {
+    
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+  }
+
+/* Add styles for the logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/* For navigation */
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-list li {
+    padding: 10px;
+}
+
+.navbar-list li a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-list li a:hover {
+    background-color: #111;
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #111;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar li {
+    width: 100%;
+    list-style-type: none; 
+}
+
+.sidebar a {
+    width: 100%;
+    display: block;
+    color: white; 
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #333; /* Hover background color */
+    border-radius: 5px;
+}
+
+.sidebar svg {
+    fill: gray; 
+    margin-right: 10px; 
+}
+
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnSmall {
+        display: none;
+    }
+
+    .hideOnLarge {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        right: -100%;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}/* Global styles */
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Add styles for the logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/* For navigation */
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-list li {
+    padding: 10px;
+}
+
+.navbar-list li a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-list li a:hover {
+    background-color: #111;
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #111;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar li {
+    width: 100%;
+    list-style-type: none; 
+}
+
+.sidebar a {
+    width: 100%;
+    display: block;
+    color: white; 
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #333; /* Hover background color */
+    border-radius: 5px;
+}
+
+.sidebar svg {
+    fill: gray; 
+    margin-right: 10px; 
+}
+
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnSmall {
+        display: none;
+    }
+
+    .hideOnLarge {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        right: -100%;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Hero image styles */
+.hero-image {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Image styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-grid-item {
+    flex-basis: calc(50% - 30px);
+    margin: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image-grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .image-grid-item {
+        flex-basis: calc(100% - 30px);
+    }
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* For Footer */
+.footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Just footer site map */
+.footer-sitemap ul li {
+    display: inline;
+    float: left;
+}
+
+.footer-sitemap li a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer-sitemap li a:hover {
+    background-color: #111;
+    border-radius: 5px;
+}
+
+/* For footer icons */
+.footer-icons ul li {
+    display: inline;
+    float: left;
+}
+
+.footer-icons li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer-icons li a:hover {
+    background-color: #111;
+    border-radius: 3px;
+}
+
+/* for footer-text */
+.footer-text li {
+    display: inline;
+    float: left;
+}
+
+.footer-text {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Hero image */
+.hero-image {
+    
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+   /* Image styling */
+   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.image-grid-item {
+    flex-basis: calc(50% - 30px); 
+    margin: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image-grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .image-grid-item {
+        flex-basis: calc(100% - 30px); 
+    }
+}
+
+a {
+    color: #007bff; 
+    text-decoration: none;
+}
+/* Headings */
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+/* For Footer */
+.footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+/* Just footer site map */
+.footer-sitemap ul li {
+    display: inline;
+    float: left;
+}
+.footer-sitemap li a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.footer-sitemap li a:hover {
+    background-color: #111;
+    border-radius: 5px;
+}
+/* For footer icons */
+.footer-icons ul li {
+    display: inline;
+    float: left;
+}
+.footer-icons li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.footer-icons li a:hover {
+    background-color:#111;
+    border-radius: 3px;
+}
+
+/* for footer-text */
+.footer-text  li {
+    display: inline;
+    float: left;
+}
+.footer-text  {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
