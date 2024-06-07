@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zer0Core Lab - Intro to Machine Learning</title>
+    <link rel="stylesheet" href="../css/genblog.css">
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap"> <!-- Google Fonts -->
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navbar-list">
+            <li><a href="../index.html"><span class="logo">Zer0Core Lab</span></a></li>
+            <li class="hideOnSmall"><a href="blog.html">Blog</a></li>
+            <li class="hideOnSmall"><a href="https://github.com/Zer0core-Lab?tab=projects">Project</a></li>
+            <li class="hideOnSmall"><a href="about.html">About</a></li>
+            <li class="menu-button hideOnLarge" onclick="toggleSidebar()"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li onclick="hideSidebar()"><a href="#"><i class="fas fa-times"></i></a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://github.com/Zer0core-Lab?tab=projects">Project</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="content-container">
+            <div class="blog">
+                <div class="row">
+                    <div class="leftcolumn">
+                        <div class="card">
+                            <h1>Introduction to Machine Learning</h1>
+                            <h5>AI/ML</h5>
+                            <p>In today's world, the term "machine learning" seems to pop up everywhere. Whether you're scrolling through social media, reading news articles, or simply using your smartphone, machine learning is at the heart of many modern technologies. But what exactly is it, and why is it so important?</p>
+                            <h2>What is Machine Learning?</h2>
+                            <p>Machine learning (ML) is a branch of artificial intelligence (AI) that focuses on building systems that can learn from and make decisions based on data. Unlike traditional programming, where developers write explicit instructions for every action, machine learning allows computers to learn and adapt through experience.</p>
+                            <p>Imagine teaching a child to recognize different animals. You don't give them a rule for every possible animal; instead, you show them pictures and they learn to identify animals over time. Machine learning works in a similar way but uses data and algorithms to 'teach' computers.</p>
+                            <h2>How Does Machine Learning Work?</h2>
+                            <p>To understand how machine learning works, let's look at a simple example: spam email detection.</p>
+                            <ul>
+                                <li><strong>Data Collection:</strong> We start with a dataset of emails, some labeled as "spam" and others as "not spam."</li>
+                                <li><strong>Training:</strong> We feed this data into a machine learning model. This model analyzes the patterns in the words, phrases, and other characteristics of the emails.</li>
+                                <li><strong>Learning:</strong> The model learns from this data to distinguish between spam and non-spam emails.</li>
+                                <li><strong>Prediction:</strong> When a new email arrives, the model predicts whether it’s spam based on what it learned.</li>
+                            </ul>
+                            <p>This process allows the model to improve over time as it sees more examples and fine-tunes its ability to distinguish spam from non-spam.</p>
+                            <h2>Types of Machine Learning</h2>
+                            <p>Machine learning can be broadly categorized into three types, each serving different purposes:</p>
+                            <h3>Supervised Learning</h3>
+                            <p><strong>How It Works:</strong> The model is trained on a labeled dataset, which means each training example is paired with an output label. For instance, in our spam email example, emails are labeled as "spam" or "not spam."</p>
+                            <p><strong>Use Cases:</strong> Image recognition, email filtering, and predicting house prices.</p>
+                            <h3>Unsupervised Learning</h3>
+                            <p><strong>How It Works:</strong> The model is given data without explicit labels and tries to find patterns or groupings. It’s like giving someone a box of jigsaw puzzle pieces without the picture on the box and asking them to put it together.</p>
+                            <p><strong>Use Cases:</strong> Customer segmentation, recommendation systems, and clustering news topics.</p>
+                            <h3>Reinforcement Learning</h3>
+                            <p><strong>How It Works:</strong> The model learns by interacting with an environment, receiving feedback in the form of rewards or penalties. It's similar to how a pet learns to perform tricks for treats.</p>
+                            <p><strong>Use Cases:</strong> Game playing (like chess or Go), robotic control, and self-driving cars.</p>
+                            <h2>Why is Machine Learning Important?</h2>
+                            <p>Machine learning powers many of the technologies we rely on daily. It helps Netflix recommend shows you might like, allows your phone to understand your voice commands, and even assists doctors in diagnosing diseases. As data grows and technology advances, machine learning is becoming an essential tool across industries.</p>
+                            <h2>Final Thoughts</h2>
+                            <p>Machine learning is transforming the way we interact with technology and the world around us. By enabling computers to learn from data and make informed decisions, machine learning opens up a world of possibilities for innovation and efficiency.</p>
+                            <p>Whether you realize it or not, machine learning is already a part of your life. Understanding its basics can help you appreciate how far we've come and imagine the incredible future that lies ahead.</p>
+                        </div>
+                    </div>
+                    <div class="rightcolumn">
+                        <h3>Other Posts</h3>
+                        <div class="card">
+                            <div class="card"><a href="oblog.html" target="_blank" style="color: white;">Programming Languages for Security Folks</a></div><br>
+                            <div class="card"><a href="emulating.html" target="_blank" style="color: white;">How to emulate raspberry pi for arm assembly programming</a></div><br>
+                            <h3>Loading Posts</h3>
+                            <div class="card">How to learn Machine Learning</div><br>
+                          <div class="card">Introduction to arm64</div><br>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-icons">
+                <ul>
+                    <li><a href="https://www.x.com" target="_blank"><i class="fab fa-xing"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="mailto:scopemask@gmail.com"><i class="far fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-text">
+            <li>&copy; 2024 Zerocore Lab</li>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
