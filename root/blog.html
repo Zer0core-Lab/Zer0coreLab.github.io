@@ -30,6 +30,11 @@
             height: auto;
         }
 
+        .image-grid-item p a {
+            color: white;
+            text-decoration: none;
+        }
+
         @media screen and (max-width: 768px) {
             .image-grid-item {
                 flex-basis: calc(100% - 30px); 
@@ -59,70 +64,77 @@
     </div>
 
     <div class="container">
-    <div class="blog-section">
-        <h2> Blog Posts</h2>
-      
-        <div class="container">
-            <div class="image-grid-item">
-              <img src="../images/prog.png" alt="programming" style="max-width: 80%;">
-              <p><a href="../root/oblog.html">Programming Languages for Hardware Hacking and Vulnerability Research</a></p>
-          </div>
-              <div class="image-grid-item">
-                  <img src="../images/rasp.jpg" alt="emulate" style="max-width: 80%;">
-                  <p><a href="../root/emulating.html">How to emulate raspberry pi for arm assembly programming</a></p>
-              </div>
+        <div class="blog-section">
+            <h2> Blog Posts</h2>
+          
+            <div class="container">
+                <div class="image-grid-item">
+                  <img src="../images/prog.png" alt="programming" style="max-width: 80%;">
+                  <p><a href="../root/oblog.html">Programming Languages for Security Folks</a></p>
                 </div>
 
-                <h2> Loading</h2>
-                
-                <div class="card">
-                    <h3><a href="arm.html" style="color: white;">Introduction to Arm Assembly</a></h3>
-                </div>
+                <div class="image-grid-item">
+                      <img src="../images/rasp.jpg" alt="emulate" style="max-width: 80%;">
+                      <p><a href="../root/emulating.html">How to Emulate raspberry pi for Arm Assembly Programming</a></p>
+                 </div>
+
+                 <div class="image-grid-item">
+                    <img src="../images/Wallejpg.jpg" alt="emulate" style="max-width: 80%;">
+                    <p><a href="../root/IntroML.html">Introduction to Machine Learning</a></p>
+                 </div>
+
+            </div>
+
+            <h2> Loading</h2>
             
-                <div class="card">
-                    <h3><a href="post2.html" style="color: white;">Basic Binary</a></h3>
-                </div>
-                <div class="card">
-                    <h3><a href="post5.html" style="color: white;">Dynamic Binary Analysis Techniques</a></h3>
-                </div>
+            <div class="card">
+                <h3><a href="arm.html" style="color: white;">How to Learn Machine Learning</a></h3>
+            </div>
+        
+            <div class="card">
+                <h3><a href="post2.html" style="color: white;">Basic Binary</a></h3>
+            </div>
+            <div class="card">
+                <h3><a href="post5.html" style="color: white;">Introduction to arm64</a></h3>
             </div>
         </div>
-
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-sitemap">
-            <ul>
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="project.html">project</a></li>
-                <li><a href="about.html">about</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-icons">
-            <ul>
-                <li><a href="https://www.x.com" target="_blank"><i class="fab fa-xing"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a></li>    
-                <li><a href="mailto:scopemask@gmail.com"><i class="far fa-envelope"></i></a></li>
-                <li><a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a></li>         
-            </ul>
-        </div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="project.html">project</a></li>
+                    <li><a href="about.html">about</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-icons">
+                <ul>
+                    <li><a href="https://www.x.com" target="_blank"><i class="fab fa-xing"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a></li>    
+                    <li><a href="mailto:scopemask@gmail.com"><i class="far fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a></li>         
+                </ul>
+            </div>
+        </div>
 
         <div class="footer-text">
             <li>&copy; 2024 Zer0Core Lab</li>
         </div>
-</footer>
-<script>
-    function toggleSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('active');
-    }
+    </footer>
 
-    function hideSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.classList.remove('active');
-    }
-</script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
 
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
